@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# 김성현(마녀)의 포트폴리오
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. 소개
 
-Currently, two official plugins are available:
+안녕하세요. 저는 김성현이라고 합니다. 흔히 온라인에서는 "마녀"라는 닉네임으로 활동하고 있습니다. 제가 멋진 사람들이 내는 빛에 이끌려 개발에 발을 들이게 된 이야기와 그렇게 해서 개발을 시작한 이후의 이야기를 담아보려고 합니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 2. 이야기
 
-## Expanding the ESLint configuration
+저는 기계공학을 전공했습니다. 기계공학에 그렇게 흥미를 붙이지는 못했습니다. 그러던 어느 날 우연히 개발자들을 만났습니다. 그들은 단 1초도 망설임없이 자신의 일을 사랑한다고 말했습니다. 그들의 열정과 확신은 그때 제 눈에는 따라가야만 할 북극성처럼 빛났습니다. 저는 그 순간, 개발자가 되기로 결심했습니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+자신의 일을 사랑하는 사람들이 내는 빛은 제 앞에 닥쳐오는 수많은 고민들 속에서도 멀리 보이는 별처럼 언제나 저를 이끌었습니다. 그저 그렇게 멋진 사람들이 내는 별빛을 따라 여기까지 왔습니다.
 
-- Configure the top-level `parserOptions` property like this:
+C와 C++, 알고리즘을 배웠고 실력을 키워 이 판에서 작은 이름을 가지게 되었습니다. "마녀"라는 닉네임을 가지고 이것저것 배워가며 프론트엔드 개발자가 되었습니다. 몇 개의 프로젝트를 했고 수백 개의 글을 작성하여 그럭저럭 검색 결과에 뜨는 블로그를 운영하게 되었습니다.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+저는 별에 좀 더 가까워졌을까요? 절대 닿을 수 없을 것만 같던, 하늘의 별처럼 빛나던 사람들 중 몇몇은 저와 같이 달리는 친구가 되었습니다. 그리고 그들과 저는 이제 더 높고 멀리 떠 있는 별들을 보며 나아갑니다. 언젠가는 거기에도 닿을 수 있을 것입니다. 그저 앞으로도, 그 별빛을 따라가면서 살고자 할 뿐입니다.
+
+발아래가 아닌 먼 하늘을 보면서 시간을 따라 걸어오다 보니 자바스크립트에 깊게 파고들게 되었습니다. 저는 많은 사람들이 관심을 가지지 않는 자바스크립트의 깊은 부분을 탐구하며 그 지식을 체계화하고 기록하려고 노력합니다. 저는 이러한 지식들이 아무도 쉽게 다가가지 않지만 분명 가치 있는 오래된 고성과 같다고 생각합니다.
+
+많은 이들이 쉽게 깊은 곳까지 다가가지 않는, 이 언어와 깊은 지식으로 쌓인 고성을 저는 사랑합니다. 그곳을 탐험하는 마녀가 되고자 합니다. 고성의 깊은 곳에는 분명 복잡하고도 아름다운 무언가가 있을 것이며 아직 발견되지 않은 보물들도 숨겨져 있을 겁니다.
+
+저는 그 보물을 찾아내고, 그 가치를 세상에 알리기 위해 밤낮으로 연구합니다. 이 고성에서 우리는 함께 프로그래밍의 비밀을 풀고 새로운 길을 개척해 나갈 것입니다. 이곳에 찾아오신 당신과 함께할 수 있어 영광입니다. 언젠가는 우리도 진짜 마녀처럼, 코드로 마법을 부릴 수 있을지도 모릅니다.
+
+## 3. 기술
+
+Vite의 react-ts 템플릿을 이용해 세팅하였습니다. styled-components를 사용하지는 않았지만 이외의 전반적인 세팅 과정은 [기본적인 React 프로젝트 세팅](https://witch.work/posts/react-my-basic-setting)에 정리하였습니다.
+
+- Language: TypeScript
+- Library: React
+- Router: react-router-dom
+- VCS: Git
+- package manager : pnpm
+- code formatter: Biome
+- Styling: TBD
+
+## 실행
+
+```bash
+pnpm install
+pnpm dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
