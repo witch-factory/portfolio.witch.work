@@ -10,13 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^9.108.3",
-    "@react-three/fiber": "^8.16.8",
+    "@react-three/drei": "^9.121.1",
+    "@react-three/fiber": "^8.17.12",
     "@vanilla-extract/css": "^1.15.3",
+    "@xyflow/react": "^12.3.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.24.1",
-    "three": "^0.166.1"
+    "three": "^0.172.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
