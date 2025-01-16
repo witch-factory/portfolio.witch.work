@@ -15,8 +15,11 @@ globalStyle('*', {
 globalStyle('html, body', {
   minHeight: '100vh',
   scrollBehavior: 'smooth',
-  backgroundColor: '#ffffff',
   color: '#28292D',
+});
+
+globalStyle('#root', {
+  backgroundColor: '#fff',
 });
 
 globalStyle('a', {
