@@ -1,14 +1,7 @@
-import Intro from './pages/intro';
-import Interest from './pages/interest';
-import * as styles from './app.css';
+import Hero from './pages/Hero';
 
 function App() {
-  return (
-    <div className={styles.app}>
-      <Intro />
-      <Interest />
-    </div>
-  );
+  return <Hero />;
 }
 
 export default App;
