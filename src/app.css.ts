@@ -1,9 +1,14 @@
 import { style } from '@vanilla-extract/css';
 
 export const app = style({
-  width: '100%',
+  width: '100vw',
   height: '100vh',
-  scrollSnapType: 'y mandatory',
-  overflowX: 'hidden',
-  overflowY: 'auto',
+  overflow: 'hidden',
+  position: 'relative',
+});
+
+export const pageWrapper = style({
+  display: 'flex',
+  flexDirection: 'row',
+  position: 'relative',
 });
