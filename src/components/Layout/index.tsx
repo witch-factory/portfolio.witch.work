@@ -1,3 +1,4 @@
+import FlyingWitch from '../FlyingWitch';
 import * as styles from './styles.css';
 
 const stars = Array.from({ length: 200 }, () => ({
@@ -12,7 +13,9 @@ function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <main className={styles.background}>
+    <article className={styles.background}>
+      <FlyingWitch />
+
       <div className={styles.starContainer}>
         {stars.map((star, index) => (
           <div
@@ -23,7 +26,7 @@ function Layout({
         ))}
       </div>
       {children}
-    </main>
+    </article>
   );
 }
 
