@@ -27,3 +27,25 @@ export const socialLinks: Social[] = [
     icon: WitchHatImage,
   },
 ];
+
+export type Project = {
+  title: string;
+  description: string;
+  image?: string;
+  url: string;
+};
+
+// 대충 gpt가 만들어 준 임의 프로젝트들
+// TODO: 제대로 수정
+export const projects: Project[] = [
+  {
+    title: '마법의 북마크 확장 프로그램',
+    description: 'Chrome 확장 프로그램으로, 직관적인 UI를 통해 북마크를 쉽게 관리할 수 있습니다.',
+    url: 'https://github.com/witch-factory',
+  },
+  {
+    title: '타로 카드 점보기 앱',
+    description: 'React와 TypeScript로 제작한 심리 테스트 & 타로 점보기 서비스입니다.',
+    url: 'https://witch.work',
+  },
+];
