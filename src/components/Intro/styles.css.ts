@@ -21,6 +21,7 @@ export const title = style({
 export const description = style({
   fontSize: '1rem',
   lineHeight: 1.5,
+  wordBreak: 'keep-all',
 });
 
 export const socialLinkContainer = style({

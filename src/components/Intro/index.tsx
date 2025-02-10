@@ -22,9 +22,11 @@ function SocialLink({ label, url, icon }: Social) {
 function IntroCard() {
   return (
     <motion.article className={styles.container}>
-      <h1>{INTRO_TITLE}</h1>
+      <h1 className={styles.title}>{INTRO_TITLE}</h1>
       {INTRO_TEXTS.map((text, index) => (
-        <p key={index}>{text}</p>
+        <p key={index} className={styles.description}>
+          {text}
+        </p>
       ))}
       <nav className={styles.socialLinkContainer}>
         {socialLinks.map(link => (
