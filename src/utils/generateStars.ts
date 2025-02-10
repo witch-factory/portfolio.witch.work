@@ -1,5 +1,5 @@
 import { galaxyStarColors } from './colors';
-import { getRandomInt } from './random';
+import { gaussianRandom, getRandomInt } from './random';
 
 export type Star = {
   x: number;
@@ -7,16 +7,18 @@ export type Star = {
   color: string;
 };
 
-export function generateOvalGalaxyStars(starNumber: number, starDispersion: number, armNumber: number = 4) {
+// 별 좌표 생성 방식 참고 : https://codepen.io/carvacodes/pen/bdgQap
+export function generateSpiralGalaxyStars(starNumber: number, starDispersion: number, armNumber: number = 4) {
   const stars = [];
   const galaxyRadius = starDispersion * 30;
 
   for (let i = 0; i < starNumber; i++) {
     const ratio = i / starNumber;
+    // 중심부에 별이 더 몰리도록 r 값을 sqrt로 변환
 
-    const x = Math.round(Math.random() * starDispersion * 2);
-    const y = Math.round(Math.random() * starDispersion * 2);
-    const mod = Math.random() * (starDispersion / 2);
+    const x = Math.round(gaussianRandom(0, 0.5) * starDispersion * 2);
+    const y = Math.round(gaussianRandom(0, 0.5) * starDispersion * 2);
+    const mod = Math.random() * starDispersion;
 
     const skew = galaxyRadius * ratio;
     const modSq = mod * mod;
@@ -40,5 +42,23 @@ export function generateOvalGalaxyStars(starNumber: number, starDispersion: numb
     }
   }
 
+  return stars;
+}
+
+export function generateOvalGalaxyStars(starCount: number, radius: number) {
+  const stars = [];
+  for (let i = 0; i < starCount; i++) {
+    // 무작위 각도 (0~360도)
+    const angle = Math.random() * Math.PI * 2;
+    // 무작위 거리 (중심에서 퍼지는 범위 설정)
+    const g = Math.abs(gaussianRandom(0, 1));
+    const distance = g * radius;
+
+    const x = Math.cos(angle) * distance;
+    const y = Math.sin(angle) * distance;
+    const color = galaxyStarColors[getRandomInt(0, galaxyStarColors.length - 1)];
+
+    stars.push({ x, y, color });
+  }
   return stars;
 }
