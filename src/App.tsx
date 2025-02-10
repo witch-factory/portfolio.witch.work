@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Hero from './pages/Hero';
 import { motion } from 'motion/react';
 import * as styles from './app.css';
-import Header from './components/Header';
+import Header from './ui/Header';
 import Project from './pages/Project';
 import Interest from './pages/Interest';
 import FlyingWitch from './components/FlyingWitch';
@@ -26,7 +26,7 @@ const pages = [
 
 // TODO: 페이지 전환 효과. 가령 밤하늘에서 별이 중앙으로 빨려들어가고 공간이 이동하는 등의 효과
 function App() {
-  const [activePageIndex, setActivePageIndex] = useState(1);
+  const [activePageIndex, setActivePageIndex] = useState(0);
 
   return (
     <main className={styles.app}>
