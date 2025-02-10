@@ -1,24 +1,22 @@
 import * as styles from './styles.css';
 
-const navLabels = ['소개', '활동', '관심사'];
-
 type Props = {
+  pageLabels: string[];
   activePageIndex: number;
   setActivePageIndex: (index: number) => void;
 };
 
-function Header({ activePageIndex, setActivePageIndex }: Props) {
+function Header({ pageLabels, activePageIndex, setActivePageIndex }: Props) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        {navLabels.map((label, index) => (
+        {pageLabels.map((label, index) => (
           <button
             type="button"
             key={index}
             className={`${styles.link} ${activePageIndex === index ? styles.active : ''}`}
             onClick={() => {
               setActivePageIndex(index);
-              console.log('click');
             }}
           >
             {label}
