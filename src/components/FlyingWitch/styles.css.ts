@@ -6,12 +6,14 @@ export const witch = style({
   height: '100px',
   zIndex: 1,
   pointerEvents: 'none',
+  userSelect: 'none',
 });
 
 export const particle = style({
   position: 'absolute',
   zIndex: 2,
-  pointerEvents: 'none',
   background: '#6741d9',
   borderRadius: '50%',
+  pointerEvents: 'none',
+  userSelect: 'none',
 });
