@@ -3,7 +3,6 @@ import { style } from '@vanilla-extract/css';
 export const container = style({
   width: '30rem',
   height: '30rem',
-  cursor: 'pointer',
 });
 
 export const card = style({
@@ -11,7 +10,6 @@ export const card = style({
   height: '100%',
   padding: '1rem',
   borderRadius: '1rem',
-  position: 'relative',
 
   display: 'flex',
   flexDirection: 'column',
@@ -20,4 +18,5 @@ export const card = style({
   backdropFilter: 'blur(5px)',
   opacity: 0,
   color: 'white',
+  cursor: 'pointer',
 });
