@@ -38,13 +38,13 @@ export type Project = {
 // TODO: 제대로 수정
 export const projects: Project[] = [
   {
-    title: '마법의 북마크 확장 프로그램',
-    description: 'Chrome 확장 프로그램으로, 직관적인 UI를 통해 북마크를 쉽게 관리할 수 있습니다.',
-    url: 'https://github.com/witch-factory',
+    title: '개인 블로그 제작',
+    description: 'Next.js로 제작한 개인 블로그입니다. 성능 최적화, 다국어 지원 등이 고려되었습니다.',
+    url: 'https://witch.work',
   },
   {
-    title: '타로 카드 점보기 앱',
-    description: 'React와 TypeScript로 제작한 심리 테스트 & 타로 점보기 서비스입니다.',
+    title: '포트폴리오 제작',
+    description: 'React와 TypeScript로 제작한 포트폴리오입니다.',
     url: 'https://witch.work',
   },
 ];
