@@ -24,6 +24,9 @@ export const overlay = style({
 
   zIndex: 100,
   animation: `${fadeIn} 0.2s ease-in-out`,
+
+  background: 'rgba(0, 0, 0, 0.5)',
+  backdropFilter: 'blur(3px)',
 });
 
 export const modal = style({
