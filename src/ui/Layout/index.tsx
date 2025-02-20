@@ -1,5 +1,5 @@
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '@/utils/constant';
-import Star from '../Star';
+import Star from '../../components/Star';
 import * as styles from './styles.css';
 
 const stars = Array.from({ length: 200 }, () => ({
@@ -16,7 +16,7 @@ function Layout({
   children: React.ReactNode;
 }) {
   return (
-    <article className={styles.background}>
+    <article className={styles.container}>
       <div className={styles.starContainer}>
         {stars.map((star, index) => (
           <Star key={index} {...star} />

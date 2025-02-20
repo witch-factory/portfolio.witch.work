@@ -1,6 +1,6 @@
 import { keyframes, style } from '@vanilla-extract/css';
 
-export const background = style({
+export const container = style({
   width: '100vw',
   height: '100vh',
   background: 'linear-gradient(to bottom, #1e1e30, #000)',
