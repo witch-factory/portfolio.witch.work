@@ -44,7 +44,7 @@ export const projects: Project[] = [
   },
   {
     title: '포트폴리오 제작',
-    description: 'React와 TypeScript로 제작한 포트폴리오입니다.',
+    description: 'React와 TypeScript로 제작한 포트폴리오입니다. 현재 보고 있는 바로 이 페이지입니다.',
     url: 'https://witch.work',
   },
 ];
