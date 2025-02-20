@@ -76,7 +76,7 @@ function Galaxy({ width, height, stars, tilt, verticalCompression, rotationSpeed
     return () => {
       cancelAnimationFrame(requestId);
     };
-  }, [width, height, rotationSpeed]);
+  }, [width, height, rotationSpeed, stars, tilt, verticalCompression]);
 
   return <canvas ref={canvasRef} width={width} height={height} />;
 }
