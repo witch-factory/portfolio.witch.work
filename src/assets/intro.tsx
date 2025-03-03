@@ -48,3 +48,65 @@ export const projects: Project[] = [
     url: 'https://witch.work',
   },
 ];
+
+type Node<T extends JSX.Element> = {
+  id: string;
+  label: string;
+  component: T;
+  x: number;
+  y: number;
+};
+
+// TODO: 최적화를 위해 위치 기반으로 변경
+type Edge = {
+  source: string;
+  target: string;
+};
+
+export type GraphData<T extends JSX.Element> = {
+  nodes: Node<T>[];
+  edges: Edge[];
+};
+
+export const pageGraphData: GraphData<JSX.Element> = {
+  nodes: [
+    {
+      id: 'Naver',
+      label: '네이버',
+      component: (
+        <a href="https://naver.com" target="_blank" rel="noreferrer noopener">
+          네이버
+        </a>
+      ),
+      x: 400,
+      y: 100,
+    },
+    {
+      id: 'Blog',
+      label: '블로그',
+      component: (
+        <a href="https://witch.work/ko" target="_blank" rel="noreferrer noopener">
+          블로그
+        </a>
+      ),
+      x: 600,
+      y: 180,
+    },
+    {
+      id: 'GitHub',
+      label: 'GitHub',
+      component: (
+        <a href="https://github.com/witch-factory" target="_blank" rel="noreferrer noopener">
+          GitHub
+        </a>
+      ),
+      x: 200,
+      y: 300,
+    },
+  ],
+  edges: [
+    { source: 'Naver', target: 'Blog' },
+    { source: 'Blog', target: 'GitHub' },
+    { source: 'GitHub', target: 'Naver' },
+  ],
+};
