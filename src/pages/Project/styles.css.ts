@@ -1,11 +1,18 @@
 import { style } from '@vanilla-extract/css';
+import libraryImage from '@/assets/witch-library.webp';
 
 export const container = style({
-  width: '100%',
+  width: '100vw',
   height: '100vh',
-  scrollSnapAlign: 'start',
-  backgroundColor: '#000',
-  overflow: 'hidden',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundImage: `url(${libraryImage})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  filter: 'blur(10px)',
 });
 
 export const title = style({
