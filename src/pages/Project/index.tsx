@@ -1,4 +1,4 @@
-import { projects } from '@/assets/intro';
+import { projects } from '@/data/project';
 import Layout from '@/ui/Layout';
 
 import Galaxy from '@/components/Galaxy';

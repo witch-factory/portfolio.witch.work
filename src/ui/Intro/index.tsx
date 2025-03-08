@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import * as styles from './styles.css';
-import { INTRO_TEXTS, INTRO_TITLE, Social, socialLinks } from '@/assets/intro';
+import { INTRO_TEXTS, INTRO_TITLE, Social, socialLinks } from '@/data/intro';
 
 function SocialLink({ label, url, icon }: Social) {
   return (

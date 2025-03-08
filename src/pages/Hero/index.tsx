@@ -1,5 +1,5 @@
-import Layout from '@/components/Layout';
-import IntroCard from '@/components/Intro';
+import Layout from '@/ui/Layout';
+import IntroCard from '@/ui/Intro';
 
 function Hero() {
   return (

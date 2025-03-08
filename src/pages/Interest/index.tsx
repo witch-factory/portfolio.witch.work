@@ -1,4 +1,4 @@
-import { pageGraphData } from '@/assets/intro';
+import { pageGraphData } from '@/data/interest';
 import Constellation from '@/components/Constellation';
 import Layout from '@/ui/Layout';
 
