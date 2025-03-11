@@ -3,8 +3,6 @@ import * as styles from './styles.css';
 import { useState } from 'react';
 
 type Props<Component extends JSX.Element> = {
-  width: number;
-  height: number;
   data: GraphData<Component>;
 };
 
@@ -13,7 +11,6 @@ function Constellation<Component extends JSX.Element>({ data }: Props<Component>
   const [isHovered, setIsHovered] = useState(false);
 
   const { width, height } = calculateBoundingBox(data.nodes, 20);
-  console.log(width, height);
 
   return (
     <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
@@ -96,7 +93,7 @@ function Constellation<Component extends JSX.Element>({ data }: Props<Component>
             <circle cx="0" cy="0" r="8" fill={isHovered ? '#ffffff' : '#c0d8f0'} filter="url(#glowEffect)" />
             {/* <circle cx="0" cy="0" r="4" fill="url(#glow)" /> */}
             <foreignObject x={0} y={0} width="100" height="100">
-              <span className={styles.label}>{node.label}</span>
+              <div className={styles.label}>{node.component}</div>
             </foreignObject>
           </g>
 
