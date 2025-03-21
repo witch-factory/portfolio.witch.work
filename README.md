@@ -32,7 +32,7 @@ Vite의 react-ts 템플릿을 이용해 세팅하였습니다. styled-components
 - VCS: Git
 - package manager : pnpm
 - code formatter: Biome
-- Graphic: Three.js
+- Graphic: Canvas
 - Styling: Vanilla Extract
 
 ## 실행
