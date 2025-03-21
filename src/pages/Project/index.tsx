@@ -14,9 +14,6 @@ const spiralGalaxyStars = generateSpiralGalaxyStars(500, 5, 6);
 function Project() {
   return (
     <Layout>
-      {/* {projects.map(project => (
-        <FlipCard key={project.title} title={project.title} description={project.description} />
-      ))} */}
       <ProjectCard
         title={projects[0].title}
         description={projects[0].description}
