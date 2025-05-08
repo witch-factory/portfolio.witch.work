@@ -1,6 +1,4 @@
-// React로 멋진 3D 은하 만들기(feat. R3F)
 import { starColors } from '@/utils/colors';
-import * as styles from './styles.css';
 import { getRandomInt } from '@/utils/random';
 
 type StarProps = {
@@ -13,10 +11,21 @@ type StarProps = {
 function Star({ x, y, size = 'medium', twinkleDuration = 2 }: StarProps) {
   const randomColor = starColors[getRandomInt(0, starColors.length - 1)];
 
+  const sizeClass = {
+    small: 'w-px h-px',
+    medium: 'w-[2px] h-[2px]',
+    large: 'w-[3px] h-[3px]',
+  }[size];
+
   return (
     <div
-      className={`${styles.star} ${styles[size]}`}
-      style={{ top: `${y}px`, left: `${x}px`, animationDuration: `${twinkleDuration}s`, background: randomColor }}
+      className={`absolute rounded-full bg-white opacity-30 animate-twinkle ${sizeClass}`}
+      style={{
+        top: `${y}px`,
+        left: `${x}px`,
+        animationDuration: `${twinkleDuration}s`,
+        background: randomColor,
+      }}
     />
   );
 }
