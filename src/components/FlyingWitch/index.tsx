@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import * as styles from './styles.css';
 import WitchImg from '@/assets/flying-witch.png';
 
 type ObjectState = {
@@ -115,11 +114,10 @@ function FlyingWitch() {
 
   return (
     <>
-      {' '}
       <motion.img
         src={WitchImg}
         alt="Flying Witch"
-        className={styles.witch}
+        className="absolute w-[100px] h-[100px] z-10 pointer-events-none select-none"
         initial={false}
         animate={{ y: [-10, 10, -10], scaleX: witchState.scale, rotate: `${witchState.rotation}deg` }}
         transition={{
@@ -134,7 +132,7 @@ function FlyingWitch() {
       {particles.map(particle => (
         <motion.div
           key={particle.id}
-          className={styles.particle}
+          className="absolute z-20 bg-[#6741d9] rounded-full pointer-events-none select-none"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           style={{
