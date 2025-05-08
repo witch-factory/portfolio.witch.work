@@ -1,6 +1,5 @@
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '@/utils/constant';
 import Star from '../../components/Star';
-import * as styles from './styles.css';
 import { useCallback, useEffect, useState } from 'react';
 import { useDebounce } from '@/utils/useDebounce';
 
@@ -35,8 +34,8 @@ function Layout({
   }, [debouncedHandleResize]);
 
   return (
-    <article className={styles.container}>
-      <div className={styles.starContainer}>
+    <article className="w-screen h-screen bg-gradient-to-b from-[#1e1e30] to-black flex flex-col items-center justify-center relative overflow-hidden">
+      <div className="absolute w-full h-full pointer-events-none">
         {stars.map((star, index) => (
           <Star key={index} {...star} />
         ))}
