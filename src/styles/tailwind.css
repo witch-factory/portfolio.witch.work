@@ -1,7 +1,87 @@
 @import "tailwindcss";
 
+@layer base{
+  :root {
+    font-family: pretendard, apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    text-rendering: optimizeSpeed;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    color: #28292D;
+  }
+
+  #root {
+    background-color: #fff;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  hr {
+    margin: 0.25rem 0;
+    border: 0;
+    border-top: 0.125rem solid #adb5bd;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0.75rem 0;
+    line-height: 1.5rem;
+  }
+
+  table {
+    width: 100%;
+    margin: 0.75rem 0;
+    border-collapse: collapse;
+    line-height: 1.75rem;
+  }
+
+  th, td {
+    padding: 0.75rem 0;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+  }
+
+  article {
+    overflow-wrap: break-word;
+  }
+}
+
 @theme {
   --animate-twinkle: twinkling 2s infinite alternate;
+  --spacing:0.25rem;
 
   @keyframes twinkling {
     0% {
