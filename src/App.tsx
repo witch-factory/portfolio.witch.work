@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Hero from './pages/Hero';
 import { motion } from 'motion/react';
-import * as styles from './app.css';
 import Header from './ui/Header';
 import Project from './pages/Project';
 import Interest from './pages/Interest';
@@ -29,15 +28,16 @@ function App() {
   const [activePageIndex, setActivePageIndex] = useState(0);
 
   return (
-    <main className={styles.app}>
+    <main className="w-screen h-screen overflow-hidden">
       <Header
         pageLabels={pages.map(page => page.label)}
         activePageIndex={activePageIndex}
         setActivePageIndex={setActivePageIndex}
       />
-      <FlyingWitch />
+      {/* TODO: 마녀가 페이지 가장자리로 가면 스크롤이 생기는 문제 해결하기 */}
+      {/* <FlyingWitch /> */}
       <motion.div
-        className={styles.pageWrapper}
+        className="flex flex-row"
         animate={{ x: `-${activePageIndex * 100}vw` }}
         transition={{ duration: 0.8, ease: 'easeInOut' }}
       >
