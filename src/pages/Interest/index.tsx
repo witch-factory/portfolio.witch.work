@@ -5,7 +5,7 @@ import Layout from '@/ui/Layout';
 function Interest() {
   return (
     <Layout>
-      <Constellation width={800} height={600} data={pageGraphData} />
+      <Constellation data={pageGraphData} />
     </Layout>
   );
 }

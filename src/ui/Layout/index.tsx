@@ -35,7 +35,7 @@ function Layout({
 
   return (
     <article className="w-screen h-screen bg-gradient-to-b from-[#1e1e30] to-black flex flex-col items-center justify-center relative overflow-hidden">
-      <div className="absolute w-full h-full pointer-events-none">
+      <div className="absolute w-screen h-screen pointer-events-none overflow-hidden">
         {stars.map((star, index) => (
           <Star key={index} {...star} />
         ))}
