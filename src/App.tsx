@@ -2,27 +2,8 @@ import { useState } from 'react';
 import Hero from './pages/Index';
 import { motion } from 'motion/react';
 import Header from './ui/Header';
-import Project from './pages/Project';
-import Interest from './pages/Laboratory';
 import FlyingWitch from './components/FlyingWitch';
 import { BrowserRouter, Route, Routes } from 'react-router';
-
-// TODO: 이후에는 소개 - 활동 - 관심사 처럼 바꾸고 싶다.
-// 혹은 소개 - 프로젝트 - 활동 - 관심사
-const pages = [
-  {
-    label: '소개',
-    component: <Hero />,
-  },
-  {
-    label: '프로젝트',
-    component: <Project />,
-  },
-  {
-    label: '관심사',
-    component: <Interest />,
-  },
-];
 
 // TODO: 페이지 전환 효과. 가령 밤하늘에서 별이 중앙으로 빨려들어가고 공간이 이동하는 등의 효과
 function App() {
