@@ -1,13 +1,15 @@
 import { SCREEN_HEIGHT, SCREEN_WIDTH } from '@/utils/constant';
-import Star from '../../components/Star';
 import { useCallback, useEffect, useState } from 'react';
 import { useDebounce } from '@/utils/useDebounce';
+import { starColors } from '@/utils/colors';
+import { getRandomInt } from '@/utils/random';
 
 const generateScreenStars = (stars: number, width: number, height: number) => {
   return Array.from({ length: stars }, () => ({
+    size: Math.random() * 1 + 1,
     x: Math.random() * width,
     y: Math.random() * height,
-    twinkleDuration: Math.random() * 2 + 1.5,
+    animation: `twinkle ${Math.random() * 2 + 1.5}s infinite ease-in-out ${Math.random() * 2}s`,
   }));
 };
 
@@ -36,9 +38,25 @@ function Layout({
   return (
     <article className="w-screen h-screen min-h-screen bg-gradient-to-b from-[#1e1e30] to-black flex flex-col items-center justify-center relative overflow-hidden">
       <div className="absolute w-screen h-screen pointer-events-none overflow-hidden">
-        {stars.map((star, index) => (
-          <Star key={index} {...star} />
-        ))}
+        {stars.map((star, index) => {
+          const randomColor = starColors[getRandomInt(0, starColors.length - 1)];
+          const { x, y, size, animation } = star;
+
+          return (
+            <div
+              key={index}
+              className="absolute rounded-full bg-white opacity-30 animate-twinkle"
+              style={{
+                width: `${size}px`,
+                height: `${size}px`,
+                top: `${y}px`,
+                left: `${x}px`,
+                animation,
+                background: randomColor,
+              }}
+            />
+          );
+        })}
       </div>
       {children}
     </article>
