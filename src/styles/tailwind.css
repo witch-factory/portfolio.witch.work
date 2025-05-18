@@ -79,11 +79,31 @@
   }
 }
 
-@layer components {
+@layer components {  
+  .nav-link {
+    @apply relative overflow-hidden font-serif text-lg text-witch-silver hover:text-white transition-all duration-300;
+  }
+  
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-witch-purple transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .active-nav-link {
+    @apply text-white;
+  }
+  
+  .active-nav-link::after {
+    @apply w-full bg-witch-purple;
+  }
 }
 
 @theme {
-  --animate-twinkle: twinkle 2s infinite alternate;
+  --animate-twinkle: twinkle 2s infinite ease-in-out;
   --animate-fade-in: fade-in 0.5s ease-in-out;
   --animate-fade-out: fade-out 0.5s ease-in-out;
   --spacing: 0.25rem;
