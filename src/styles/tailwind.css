@@ -88,14 +88,14 @@
   --animate-fade-out: fade-out 0.5s ease-in-out;
   --spacing: 0.25rem;
 
-  --color-witch-dark:'#1A1F2C';
-  --color-witch-purple:'#9b87f5';
-  --color-witch-deep-purple:'#6E59A5';
-  --color-witch-light-purple:'#D6BCFA';
-  --color-witch-soft-purple:'#E5DEFF';
-  --color-witch-charcoal:'#403E43';
-  --color-witch-dark-charcoal:'#221F26';
-  --color-witch-silver:'#9F9EA1';
+  --color-witch-dark:#1A1F2C;
+  --color-witch-purple:#9b87f5;
+  --color-witch-deep-purple:#6E59A5;
+  --color-witch-light-purple:#D6BCFA;
+  --color-witch-soft-purple:#E5DEFF;
+  --color-witch-charcoal:#403E43;
+  --color-witch-dark-charcoal:#221F26;
+  --color-witch-silver:#9F9EA1;
 
   @keyframes fade-in {
     0% {
