@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Hero from './pages/Index';
 import Header from './ui/Header';
 import FlyingWitch from './components/FlyingWitch';
 import { BrowserRouter, Route, Routes } from 'react-router';
@@ -18,6 +17,7 @@ function App() {
       {/* <FlyingWitch /> */}
       <BrowserRouter>
         <Layout>
+          <Header />
           <Routes>
             <Route index element={<div>메인</div>} />
             <Route path="/projects" element={<div>프로젝트</div>} />
