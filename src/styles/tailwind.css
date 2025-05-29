@@ -106,6 +106,7 @@
   --animate-twinkle: twinkle 2s infinite ease-in-out;
   --animate-fade-in: fade-in 0.5s ease-in-out;
   --animate-fade-out: fade-out 0.5s ease-in-out;
+  --animate-float: float 6s infinite ease-in-out;
   --spacing: 0.25rem;
 
   --color-witch-dark:#1A1F2C;
@@ -136,6 +137,18 @@
     100% {
       opacity: 0;
       transform: translateY(10px);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 

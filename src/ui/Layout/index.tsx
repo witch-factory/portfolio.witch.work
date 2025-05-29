@@ -36,7 +36,7 @@ function Layout({
   }, [debouncedHandleResize]);
 
   return (
-    <article className="w-screen h-screen min-h-screen bg-gradient-to-b from-[#1e1e30] to-black flex flex-col items-center justify-center relative overflow-hidden">
+    <article className="w-screen h-screen min-h-screen bg-gradient-to-b from-[#1e1e30] to-black relative">
       <div className="absolute w-screen h-screen pointer-events-none overflow-hidden">
         {stars.map((star, index) => {
           const randomColor = starColors[getRandomInt(0, starColors.length - 1)];

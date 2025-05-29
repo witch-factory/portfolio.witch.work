@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import Header from './ui/Header';
 import FlyingWitch from './components/FlyingWitch';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Layout from './ui/Layout';
+import Home from './pages/Home';
 
 // TODO: 페이지 전환 효과. 가령 밤하늘에서 별이 중앙으로 빨려들어가고 공간이 이동하는 등의 효과
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Layout>
           <Header />
           <Routes>
-            <Route index element={<div>메인</div>} />
+            <Route index element={<Home />} />
             <Route path="/projects" element={<div>프로젝트</div>} />
             <Route path="/laboratory" element={<div>관심사</div>} />
           </Routes>
